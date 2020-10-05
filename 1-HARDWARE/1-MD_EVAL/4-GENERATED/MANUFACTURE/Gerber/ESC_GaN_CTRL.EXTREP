@@ -1,0 +1,38 @@
+------------------------------------------------------------------------------------------
+Gerber File Extension Report For: ESC_GaN_CTRL.GBR   5/27/2020  10:18:49 AM
+------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------
+Layer Extension     Layer Description                      
+------------------------------------------------------------------------------------------
+.GTO                Top Overlay                             
+.GTP                Top Paste                               
+.GTS                Top Solder                              
+.GTL                TOP_SIG_L1                              
+.GP1                TOP_GND_L2                              
+.G1                 MID_PWR_L3                              
+.G2                 MID_PWR_L4                              
+.GP2                BOT_GND_L5                              
+.GBL                BOT_SIG_L6                              
+.GBS                Bottom Solder                           
+.GBP                Bottom Paste                            
+.GBO                Bottom Overlay                          
+.GM1                Mechanical 1                            
+.GM16               Mechanical 16                           
+.GM2                Top Assembly                            
+.GM3                Bottom Assembly                         
+.GM4                Mechanical 4                            
+.GM5                Mechanical 5                            
+.GM6                Top 3D Body                             
+.GM7                Bottom 3D Body                          
+.GM13               Mechanical 13                           
+.GM15               Mechanical 15                           
+.GKO                Keep-Out Layer                          
+.GML                Multi-Layer                             
+.1                  Dielectric1                             
+.2                  Dielectric 2                            
+.3                  Dielectric 9                            
+.5                  Dielectric 10                           
+.4                  Dielectric 8                            
+------------------------------------------------------------------------------------------

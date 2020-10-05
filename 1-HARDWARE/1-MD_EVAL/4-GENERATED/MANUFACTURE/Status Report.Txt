@@ -1,0 +1,10 @@
+Output: TEST_POINT_REPORT
+Type  : Test Points
+From  : PCB Document [ESC_GaN_CTRL.PcbDoc]
+   Generated File[Fabrication Testpoint Report for ESC_GaN_CTRL.csv]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 10:18:53 AM On 5/27/2020

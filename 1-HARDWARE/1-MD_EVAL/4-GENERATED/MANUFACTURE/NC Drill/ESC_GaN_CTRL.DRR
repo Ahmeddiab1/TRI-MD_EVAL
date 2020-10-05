@@ -1,0 +1,23 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: ESC_GaN_CTRL.PcbDoc   5/27/2020  10:18:50 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : TOP_SIG_L1 to BOT_SIG_L6
+ASCII Plated RoundHoles File : ESC_GaN_CTRL-Plated.TXT
+ASCII Non-Plated RoundHoles File : ESC_GaN_CTRL-NonPlated.TXT
+EIA File   : ESC_GaN_CTRL.DRL
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      0.15mm (6mil)                                             Round             264       PTH        0.00mm (0.00inch)
+T2      0.2mm (8mil)                                              Round             41        PTH        0.00mm (0.00inch)
+T3      0.3mm (12mil)                                             Round             1         PTH        0.00mm (0.00inch)
+T4      0.4mm (16mil)                                             Round             2         PTH        0.00mm (0.00inch)
+T5      0.5mm (20mil)                                             Round             3         PTH        0.00mm (0.00inch)
+T6      1.2mm (47mil)                                             Round             2         PTH        0.00mm (0.00inch)
+T7      1.1mm (43mil)                                             Round             3         NPTH       0.00mm (0.00inch)
+T8      2.4mm (94mil)                                             Round             4         NPTH       0.00mm (0.00inch)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              320
+
+Total Processing Time (hh:mm:ss) : 00:00:00

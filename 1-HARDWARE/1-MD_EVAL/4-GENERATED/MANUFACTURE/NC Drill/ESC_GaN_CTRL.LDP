@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\TOWER_HOME\Documents\GitHub\TRI_ESC\1-HARDWARE\2-ESC_CTRL\2-PCB\ESC_GaN_CTRL.PcbDoc
+LayersSetName=Top_Bot_Plated_Thru_Holes|DrillFile=esc_gan_ctrl-plated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl
+LayersSetName=Top_Bot_NonPlated_Thru_Holes|DrillFile=esc_gan_ctrl-nonplated.txt|DrillLayers=gtl,gp1,g1,g2,gp2,gbl

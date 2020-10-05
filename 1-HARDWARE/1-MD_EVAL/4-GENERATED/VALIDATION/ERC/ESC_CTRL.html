@@ -1,0 +1,432 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+        td, th {
+            padding: 0.5em;
+            text-align : left;
+        }
+        th {
+            background-color : #EEEEEE;
+        
+        }
+        th.column1, td.column1 {
+            width : 10em;
+        }
+
+        th.column2, td.column2 {
+            width : 30em;
+        }
+
+        table {
+            width : 100%;
+            font-size: 0.9em;
+        }
+
+		.header_holder {
+			Width = 100%;
+			border = 0px solid green;
+			padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+        }
+
+        .front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+        }
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+        .total_column1, .total_column {
+            font-weight : bold;
+        }
+        .total_column1 {
+            text-align : left;
+        }
+        .warning, .error {
+            color : red;
+            font-weight : bold;
+        }
+        tr.onmouseout_odd {
+            background-color : #white;
+        }
+        tr.onmouseout_even { 
+            background-color : #FAFAFA;
+        }
+        tr.onmouseover_odd, tr.onmouseover_even { 
+            background-color : #EEEEEE;
+        } 
+        a:link, a:visited, .q a:link,.q a:active,.q {
+            color: #21489e; 
+        }
+        a:link.callback, a:visited.callback { 
+            color: #21489e;
+        }
+        p.contents_level1 {
+            font-weight : bold;
+            font-size : 110%;
+            margin : 0.5em;
+        }
+        p.contents_level2 {
+            position : relative;
+            left : 20px;
+            margin : 0.5em;
+        }
+    </style><script type="text/javascript">
+        function coordToMils(coord) {
+            var number = coord / 10000;
+            
+            if (number != number.toFixed(3))
+                number = number.toFixed(3);
+            
+            return number + 'mil'
+        }
+
+        function coordToMM(coord) {
+            var number = 0.0254 * coord / 10000;
+            
+            if (number != number.toFixed(4))
+                number = number.toFixed(4);
+            
+            return number + 'mm'
+        }
+    
+        function convertCoord(coordNode, units) {
+            for (var i = 0; i < coordNode.childNodes.length; i++) {
+                coordNode.removeChild(coordNode.childNodes[i]);
+            }
+
+            var coord = coordNode.getAttribute('value');
+            if (coord != null) {
+                if (units == 'mm') {
+                    textNode = document.createTextNode(coordToMM(coord));
+                    coordNode.appendChild(textNode);
+                } else if (units == 'mil') {
+                    textNode = document.createTextNode(coordToMils(coord));
+                    coordNode.appendChild(textNode);
+                }
+            }
+        }
+    
+        function convertUnits(unitNode, units) {
+            for (var i = 0; i < unitNode.childNodes.length; i++) {
+                unitNode.removeChild(unitNode.childNodes[i]);
+            }
+        
+            textNode = document.createTextNode(units); 
+            unitNode.appendChild(textNode);
+        }
+    
+        function changeUnits(radio_input, units) {
+            if (radio_input.checked) {
+            
+                var elements = document.getElementsByName('coordinate');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertCoord(elements[i], units);
+                    }
+                }
+    
+                var elements = document.getElementsByName('units');
+                if (elements) {
+                    for (var i = 0; i < elements.length; i++) {
+                        convertUnits(elements[i], units);
+                    }
+                }
+            }
+        }
+    </script></head>
+<body onload=""><img ALT="Altium" src="
+            file://C:\Users\TOWER_HOME\Documents\AD20\Templates\AD_logo.png
+        "><h1>Electrical Rule Check Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">5/20/2020</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4:16:37 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\TOWER_HOME\Documents\GitHub\TRI_ESC\1-HARDWARE\2-ESC_CTRL\4-GENERATED\VALIDATION\ERC\ESC_CTRL.html" class="file"><acronym title="C:\Users\TOWER_HOME\Documents\GitHub\TRI_ESC\1-HARDWARE\2-ESC_CTRL\4-GENERATED\VALIDATION\ERC\ESC_CTRL.html">C:\Users\TOWER_HOME\Documents\GitHub\TRI_ESC\1-HARDWARE\2-ESC_CTRL\4-GENERATED\VALIDATION\ERC\ESC_CTRL.html</acronym></a></td>
+</tr>
+</table><a name="IDV5LLSMPC0ARLBDJJOAINHW3ANNCDMTIILVQRLUB2UR2WOJNAFIGP"><table>
+<tr>
+<th class="column1">Class</th>
+<th class="column2">Document</th>
+<th class="column3">Message</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">3-MCU.SchDoc</td>
+<td class="column3">Extra Pin 1 () in Normal of design item TP ROUND.</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">3-MCU.SchDoc</td>
+<td class="column3">Floating Net Label TIM3_ETR at (175mm,238mm)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire ADC1_IN8 has multiple names (Net Label ADC1_IN8, Sheet Entry U_3-MCU-BEMF_U(Output), Sheet Entry U_7-CONNECTORS-BEMF_U(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire ADC2_IN8 has multiple names (Net Label ADC2_IN8, Sheet Entry U_3-MCU-BEMF_V(Output), Sheet Entry U_7-CONNECTORS-BEMF_V(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire ADC2_IN9 has multiple names (Net Label ADC2_IN9, Sheet Entry U_3-MCU-BEMF_W(Output), Sheet Entry U_7-CONNECTORS-BEMF_W(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire ADC4_IN1_N has multiple names (Net Label ADC4_IN1_N, Net Label SENS_VBUS_N, Net Label SENS_VBUS_N, Sheet Entry U_3-MCU-V_BUS_N(Input), Sheet Entry U_7-CONNECTORS-SENS_V_BUS_N(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire ADC4_IN1_P has multiple names (Net Label ADC4_IN1_P, Net Label SENS_VBUS_P, Net Label SENS_VBUS_P, Sheet Entry U_3-MCU-V_BUS_P(Input), Sheet Entry U_7-CONNECTORS-SENS_V_BUS_P(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire ADC4_IN3 has multiple names (Net Label ADC4_IN3, Sheet Entry U_3-MCU-TEMP_SENS(Input), Sheet Entry U_7-CONNECTORS-SENS_TEMP_1(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire COMP1_IN_P has multiple names (Net Label COMP1_IN_P, Net Label COMP1_IN_P, Net Label OPAMP1_VIN_P, Net Label SENS_SH_U_P, Net Label SENS_SH_U_P, Sheet Entry U_3-MCU-OPAMP1_VIN_P(Input), Sheet Entry U_7-CONNECTORS-SENS_SH_U_P(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire COMP3_IN_P has multiple names (Net Label COMP3_IN_P, Net Label COMP3_IN_P, Net Label OPAMP2_VIN_P, Net Label SENS_SH_V_P, Net Label SENS_SH_V_P, Sheet Entry U_3-MCU-OPAMP2_VIN_P(Input), Sheet Entry U_7-CONNECTORS-SENS_SH_V_P(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire COMP4_IN_P has multiple names (Net Label COMP4_IN_P, Net Label COMP4_IN_P, Net Label OPAMP3_VIN_P, Net Label SENS_SH_W_P, Net Label SENS_SH_W_P, Sheet Entry U_3-MCU-OPAMP3_VIN_P(Input), Sheet Entry U_7-CONNECTORS-SENS_SH_W_P(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire I2C2_SCL has multiple names (Net Label I2C2_SCL, Sheet Entry U_3-MCU-I2C_SCL(Passive))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire I2C2_SDA has multiple names (Net Label I2C2_SDA, Sheet Entry U_3-MCU-I2C_SDA(Passive))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire JTCK has multiple names (Net Label JTCK, Sheet Entry U_3-MCU-JTCK-SWCLK(I/O), Sheet Entry U_4-JTAG-TCLK(I/O))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire JTDI has multiple names (Net Label JTDI, Sheet Entry U_3-MCU-JTDI(Input), Sheet Entry U_4-JTAG-TDI(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire JTDO has multiple names (Net Label JTDO, Sheet Entry U_3-MCU-JTDO-SWO(Output), Sheet Entry U_4-JTAG-TDO(Input))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire JTMS has multiple names (Net Label JTMS, Sheet Entry U_3-MCU-JTMS-SWDIO(I/O), Sheet Entry U_4-JTAG-TMS(I/O))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetJ1_U_2 has multiple names (Sheet Entry U_7-CONNECTORS-GATE_W_P(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_OUT_H(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetJ1_V_2 has multiple names (Sheet Entry U_7-CONNECTORS-GATE_V_P(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_OUT_H(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetJ1_W_2 has multiple names (Sheet Entry U_7-CONNECTORS-GATE_U_P(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_OUT_H(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetJ2_U_2 has multiple names (Sheet Entry U_7-CONNECTORS-GATE_W_N(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_OUT_L(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetJ2_V_2 has multiple names (Sheet Entry U_7-CONNECTORS-GATE_V_N(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_OUT_L(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetJ2_W_2 has multiple names (Sheet Entry U_7-CONNECTORS-GATE_U_N(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_OUT_L(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetR1_U_1 has multiple names (Sheet Entry U_3-MCU-FLT_W(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_LOCK(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetR1_V_1 has multiple names (Sheet Entry U_3-MCU-FLT_V(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_LOCK(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetR1_W_1 has multiple names (Sheet Entry U_3-MCU-FLT_U(Input), Sheet Entry U_11-PWM_INTERLOCK-PWM_LOCK(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetU2_1 has multiple names (Sheet Entry U_3-MCU-FDCAN2_RX(Input), Sheet Entry U_5-CAN_TRANSCEIVER-RX_CAN_FD2(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire NetU2_4 has multiple names (Sheet Entry U_3-MCU-FDCAN2_TX(Output), Sheet Entry U_5-CAN_TRANSCEIVER-TX_CAN_FD2(Input))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire OPAMP1_VIN_N has multiple names (Net Label OPAMP1_VIN_N, Net Label OPAMP1_VIN_N, Net Label SENS_SH_U_N, Net Label SENS_SH_U_N, Sheet Entry U_3-MCU-OPAMP1_VIN_N(Input), Sheet Entry U_7-CONNECTORS-SENS_SH_U_N(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire OPAMP2_VIN_N has multiple names (Net Label OPAMP2_VIN_N, Net Label OPAMP2_VIN_N, Net Label SENS_SH_V_N, Net Label SENS_SH_V_N, Sheet Entry U_3-MCU-OPAMP2_VIN_N(Input), Sheet Entry U_7-CONNECTORS-SENS_SH_V_N(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire OPAMP3_VIN_N has multiple names (Net Label OPAMP3_VIN_N, Net Label OPAMP3_VIN_N, Net Label SENS_SH_W_N, Net Label SENS_SH_W_N, Sheet Entry U_3-MCU-OPAMP3_VIN_N(Input), Sheet Entry U_7-CONNECTORS-SENS_SH_W_N(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">3-MCU.SchDoc</td>
+<td class="column3">Nets Wire STATUS_1 has multiple names (Net Label STATUS_1, Net Label STATUS_1, Net Label TIM3_CH3)</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">3-MCU.SchDoc</td>
+<td class="column3">Nets Wire STATUS_2 has multiple names (Net Label STATUS_2, Net Label STATUS_2, Net Label TIM3_CH4)</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM1_CH1 has multiple names (Net Label TIM1_CH1, Sheet Entry U_3-MCU-GATE_U_P(Output), Sheet Entry U_11-PWM_INTERLOCK-PWM_IN_H(Input))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM1_CH1N has multiple names (Net Label TIM1_CH1N, Sheet Entry U_3-MCU-GATE_U_N(Output), Sheet Entry U_11-PWM_INTERLOCK-PWM_IN_L(Input))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM1_CH2 has multiple names (Net Label TIM1_CH2, Sheet Entry U_3-MCU-GATE_V_P(Output), Sheet Entry U_11-PWM_INTERLOCK-PWM_IN_H(Input))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM1_CH2N has multiple names (Net Label TIM1_CH2N, Sheet Entry U_3-MCU-GATE_V_N(Output), Sheet Entry U_11-PWM_INTERLOCK-PWM_IN_L(Input))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM1_CH3 has multiple names (Net Label TIM1_CH3, Sheet Entry U_3-MCU-GATE_W_P(Output), Sheet Entry U_11-PWM_INTERLOCK-PWM_IN_H(Input))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM1_CH3N has multiple names (Net Label TIM1_CH3N, Sheet Entry U_3-MCU-GATE_W_N(Output), Sheet Entry U_11-PWM_INTERLOCK-PWM_IN_L(Input))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM2_CH1 has multiple names (Net Label TIM2_CH1, Sheet Entry U_3-MCU-BEMF_SLCT(Output), Sheet Entry U_7-CONNECTORS-BEMF_SELECT(Input))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM4_CH1 has multiple names (Net Label TIM4_CH1, Sheet Entry U_3-MCU-ENC_A(Input), Sheet Entry U_7-CONNECTORS-ENC_A(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM4_CH2 has multiple names (Net Label TIM4_CH2, Sheet Entry U_3-MCU-ENC_B(Input), Sheet Entry U_7-CONNECTORS-ENC_B(Output))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM4_CH3 has multiple names (Net Label TIM4_CH3, Sheet Entry U_3-MCU-ENC_INDEX(Input), Sheet Entry U_7-CONNECTORS-ENC_INDEX(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire TIM5_CH2 has multiple names (Net Label TIM5_CH2, Sheet Entry U_3-MCU-PWN_IN(Input))</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire USART2_RX has multiple names (Net Label USART2_RX, Sheet Entry U_3-MCU-USART2_RX(Input), Sheet Entry U_6-MAVLINK_TRANSCEIVER-RX_MAVLINK(Output))</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">Warning</td>
+<td class="column2">1-MAIN.SchDoc</td>
+<td class="column3">Nets Wire USART2_TX has multiple names (Net Label USART2_TX, Sheet Entry U_3-MCU-USART2_TX(Output), Sheet Entry U_6-MAVLINK_TRANSCEIVER-TX_MAVLINK(Input))</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

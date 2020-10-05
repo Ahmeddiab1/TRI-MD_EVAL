@@ -1,0 +1,10 @@
+Output: PROJECT_HIERARCHY
+Type  : ReportHierarchy
+From  : Variant [[No Variations]] of Project [ESC_CTRL.PrjPCB]
+   Generated File[PROJECT_HIERARCHY.REP]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 6:28:25 PM On 5/21/2020
